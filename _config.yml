@@ -10,12 +10,15 @@ color-scheme: auto
 
 # build settings
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-remote-theme
   - jemoji
 
+remote_theme: BDHU/minimalist
+
 # You can find fonts from https://iconify.design or https://fontawesome.com. Below is just an example illustrating how to use custom icons
-sidebar:
 sidebar:
   - name: Publications
     icon: <i class="fa-solid fa-book-open"></i>
