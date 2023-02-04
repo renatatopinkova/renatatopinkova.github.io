@@ -6,7 +6,7 @@ permalink: publications
 
 
 ## Publications
-Raudenská, P., & **Topinková, R.** (2023). The #scicomm phenomenon: Using and analysing big data to track science communication on Czech research institutional websites. Czech Sociological Review. https://doi.org/10.13060/csr.2023.004
+Raudenská, P., & **Topinková, R.** (2023). The #scicomm phenomenon: Using and analysing big data to track science communication on Czech research institutional websites. Czech Sociological Review. [https://doi.org/10.13060/csr.2023.004](https://doi.org/10.13060/csr.2023.004)
 
 del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2022). Mental health concerns prelude the Great Resignation: Evidence from Social Media. *arXiv:2208.07926.* [https://doi.org/10.48550/ARXIV.2208.07926](https://doi.org/10.48550/ARXIV.2208.07926)
 
