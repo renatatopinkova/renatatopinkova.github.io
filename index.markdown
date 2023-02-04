@@ -11,3 +11,5 @@ My thesis examines homophily in online dating, using digital trace data from onl
 I am interested in computational social science (scraping, text as data, online experiments, new data).
 
 I like dogs, baking, knitting (both in and outside of RMarkdown) and learning new things in R.
+
+X
