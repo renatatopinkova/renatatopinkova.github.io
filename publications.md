@@ -6,9 +6,11 @@ permalink: publications
 
 
 ## Publications
-Raudenská, P., & **Topinková, R.** (2023). The #scicomm phenomenon: Using and analysing big data to track science communication on Czech research institutional websites. Czech Sociological Review. [https://doi.org/10.13060/csr.2023.004](https://doi.org/10.13060/csr.2023.004)
+del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2023). Mental health concerns precede quits: shifts in the work discourse during the Covid-19 pandemic and great resignation. *EPJ Data Science*, 12(49). [https://doi.org/10.1140/epjds/s13688-023-00417-2](https://doi.org/10.1140/epjds/s13688-023-00417-2)
 
-del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2022). Mental health concerns prelude the Great Resignation: Evidence from Social Media. *arXiv:2208.07926.* [https://doi.org/10.48550/ARXIV.2208.07926](https://doi.org/10.48550/ARXIV.2208.07926)
+
+Raudenská, P., & **Topinková, R.** (2023). The #scicomm phenomenon: Using and analysing big data to track science communication on Czech research institutional websites. *Czech Sociological Review*. [https://doi.org/10.13060/csr.2023.004](https://doi.org/10.13060/csr.2023.004)
+
 
 Šetinová, M. & **Topinková, R.** (2021). Partner preference and age: Real-user mating behavior in online dating. *Journal of Family Research*, 33 (3). 566-591. [https://doi.org/10.20377/jfr-540](https://doi.org/10.20377/jfr-540) 
 
