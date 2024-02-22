@@ -2,7 +2,7 @@ title: Renata Topinkova
 logo: img/renata.png
 email: renata.topinkova [at] lmu.de
 description: >- # this means to ignore newlines until "baseurl:"
-  Researcher in Computational Social Science.
+  Postdoc in Computational Social Science.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://renatatopinkova.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 favicon: true
