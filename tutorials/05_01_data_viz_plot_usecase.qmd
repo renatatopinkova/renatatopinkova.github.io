@@ -792,6 +792,6 @@ asia |>
   geom_line() + 
   scale_color_manual(values = c("Japan" = "gray", "Korea, Rep." = "blue", "Korea, Dem. Rep." = "black", "China" = "red")) + 
   geom_vline(xintercept = 1970, linetype = "dotted") + 
-  annotate("text", x = 1978, y = 25000, label = "Something happened?")
+  annotate("text", x = 1980, y = 25000, label = "Something happened?")
 ```
 
