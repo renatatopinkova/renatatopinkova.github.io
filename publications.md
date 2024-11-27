@@ -30,7 +30,7 @@ Holubová, K., Mlynář, J., Javůrková, A., & **Topinková, R.** (2017). Nená
 
 ## Conferences
 
-Topinková, R. & Ruiz, T. (2024) Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [poster](../docs/topinkova_ruiz_poster_venice24.pdf)
+Topinková, R. & Ruiz, T. (2024) Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [Poster available](../docs/topinkova_ruiz_poster_venice24.pdf)
 
 
 Topinková, R. & Schwemmer, C. (2023) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy.
