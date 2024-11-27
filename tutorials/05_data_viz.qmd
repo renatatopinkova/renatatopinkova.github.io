@@ -182,7 +182,7 @@ ggplot(data = penguins,
 
 <br>
 
-#### **🧠 Try it yourself**
+#### 🧠 Try it yourself**
 
 Fill in the blanks (\_\_\_\_\_\_) in the code to add subtitle, caption, and change the labels of x and y axes.
 
@@ -244,7 +244,7 @@ ggplot(data = penguins,
 
 ### Themes
 
-So far, we changed mainly how our data is displayed. But we may also want to make our plots look nicer in general. **Theme functions** are used to control the non-data elements of a plot, such as text, gridlines, background, and axes. There are several pre-defined themes that your can use, such as `theme_minimal()`.
+So far, we changed mainly how our data is displayed. But we may also want to make our plots look nicer in general. **Theme functions** are used to control the non-data elements of a plot, such as text, gridlines, background, and axes. There are several pre-defined themes that your can use, such as `theme_bw()`.
 
 ```{webr}
 #| warning: false
@@ -253,14 +253,14 @@ ggplot(data = penguins,
                y = body_mass_g)) + 
   geom_point() + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal()
+  theme_bw()
 ```
 
 <br>
 
-#### **🧠 Try it yourself**
+#### 🧠 Try it yourself**
 
-Modify the code chunk below to experiment with different themes. Some of the possibilites are: `theme_bw()`, `theme_linedraw()`, or `theme_dark()`. You can see all the available `theme`s that get loaded with `ggplot2` [here](https://ggplot2.tidyverse.org/reference/ggtheme.html).
+Modify the code chunk below to experiment with different themes. Some of the possibilites are `theme_linedraw()`, or `theme_dark()`. You can see all the available `theme`s that get loaded with `ggplot2` [here](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
 ```{webr}
 #| warning: false
@@ -329,7 +329,7 @@ ggplot(data = penguins,
   theme(plot.title = element_text(size = 18))
 ```
 
-Alternatively, I can use one of the pre-defined themes as a baseline and then overwrite parts of it. I could do it by first adding the layer with the pre-defined theme (e.g., `theme_minimal()` ) and then calling `theme()`:
+Alternatively, I can use one of the pre-defined themes as a baseline and then overwrite parts of it. I could do it by first adding the layer with the pre-defined theme (e.g., `theme_bw()` ) and then calling `theme()`:
 
 ```{webr}
 #| warning: false
@@ -338,7 +338,7 @@ ggplot(data = penguins,
                y = body_mass_g)) + 
   geom_point() + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() + 
+  theme_bw() + 
   theme(plot.title = element_text(size = 18))
 ```
 
@@ -349,7 +349,7 @@ ggplot(data = penguins,
 We made our first plot, we can see that there is correlation between penguins' flipper length and body mass. But we also know that we have three different species of penguins in our data. We can see this by running:
 
 ```{webr}
-panguins |> 
+penguins |> 
   distinct(species)
 ```
 
@@ -369,14 +369,14 @@ ggplot(data = penguins,
            color = species)) + 
   geom_point() + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 That wasn't so hard, was it! It's clear now that the penguins flipper lengths and weights differ by species. Gentoo penguins seem to be overall bigger than other species.
 
 💡 Notice also that mapping `color` to `species` created a **legend** on the right side of the plot.
 
-#### **🧠 Try it yourself**
+#### 🧠 Try it yourself**
 
 Modify the following code to map `species` to `shape`.
 
@@ -389,7 +389,7 @@ ggplot(data = penguins,
            ___ = ____)) + 
   geom_point() + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 
@@ -421,7 +421,7 @@ ggplot(data = penguins,
            shape = species)) + 
   geom_point() + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 
@@ -431,7 +431,7 @@ ggplot(data = penguins,
 
 #### Beware: Mapping vs Setting
 
-What we've done so far was **mapping** variables to aesthetics. However, we may also want to change the appearance of all points at once. We can do this by **setting** to values. Unlike mapping to variables, **setting** is always done \*\*outside of the `aes()` call.
+What we've done so far was **mapping** variables to aesthetics. However, we may also want to change the appearance of all points at once. We can do this by **setting** to values. Unlike mapping to variables, **setting** is always done **outside** of the `aes()` call.
 
 To increase the sizes of all points, we could call:
 
@@ -442,7 +442,7 @@ ggplot(data = penguins,
            y = body_mass_g)) + 
   geom_point(size = 4) + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 I could also decide to make all my points blue.
@@ -455,7 +455,7 @@ ggplot(data = penguins,
   geom_point(size = 4,
              color = "blue") + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 So far, the results are predictable. I **set** the color of points to blue, so my points are blue. But what if I made a mistake and instead put the `color = "blue"` inside the `aes()`?
@@ -468,7 +468,7 @@ ggplot(data = penguins,
            color = "blue")) + # notice the change!
   geom_point(size = 4) + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 The color of all points changed... But to red? 🤯 **Why did this happen?**
@@ -489,7 +489,7 @@ ggplot(data = penguins,
            color = species)) + 
   geom_point() + 
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 Imagine that we want to add a rectangle (using `geom_rectangle()`) to our plot. Maybe it's some part of data we want to highlight.
@@ -505,7 +505,7 @@ ggplot(data = penguins,
   geom_rect(aes(xmin = 210, xmax = 220, ymin = 0, ymax = Inf), fill = "black", color = "black") +
   geom_point() +  # points come second
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 ... or **after** the `geom_point()` layer:
@@ -519,7 +519,7 @@ ggplot(data = penguins,
   geom_point() +  # points come first
   geom_rect(aes(xmin = 210, xmax = 220, ymin = 0, ymax = Inf), fill = "black", color = "black") +
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
-  theme_minimal() 
+  theme_bw() 
 ```
 
 ### Small multiples - facetting
@@ -536,7 +536,7 @@ ggplot(data = penguins,
   geom_point() +  
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
   facet_wrap(vars(species)) + #<1>
-  theme_minimal() 
+  theme_bw() 
 ```
 
 1.  There are two ways on how to `facet_wrap()` based on a column, either by wrapping it in `vars()` as seen in our example (`facet_wrap(vars(species))`, or by calling `facet_wrap(~species)`. Both produce the same result, the `~` notation is an older version of the function.
@@ -559,7 +559,7 @@ ggplot(data = penguins,
   geom_point() +  
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
   facet_wrap(vars(species), ncol = 1) + 
-  theme_minimal() 
+  theme_bw() 
 ```
 
 **2) Faceting by two variables**
@@ -572,7 +572,7 @@ ggplot(data = penguins,
   geom_point() +  
   labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
   facet_wrap(vars(species, island)) + 
-  theme_minimal() 
+  theme_bw() 
 ```
 
 🏝️ We can see that not all species of penguins live on all the islands!
