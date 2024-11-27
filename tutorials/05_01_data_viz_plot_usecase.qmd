@@ -514,6 +514,7 @@ Make a histogram of `lifeExp` using the data you have created in the previous st
 #| exercise:
 #|  - ex_hist
 #|  - ex_hist_bin
+#|  - ex_density
 gapminder_filtered <- gapminder |> 
   filter(year == 1952)
 ```
@@ -565,6 +566,7 @@ A density plot is a smoothed visualization of the distribution of a continuous v
 Change the code below from a histogram to a **density plot** (R: `geom_density()`.
 
 ```{webr}
+#| exercise: ex_density
 gapminder_filtered |> 
   ggplot(aes(x = lifeExp)) + 
   geom_histogram() # change me to density plot!
