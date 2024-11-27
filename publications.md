@@ -6,6 +6,7 @@ permalink: publications
 
 
 ## Publications
+
 del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2023). Mental health concerns precede quits: shifts in the work discourse during the Covid-19 pandemic and great resignation. *EPJ Data Science*, 12(49). [https://doi.org/10.1140/epjds/s13688-023-00417-2](https://doi.org/10.1140/epjds/s13688-023-00417-2)
 
 
@@ -28,6 +29,13 @@ Holubová, K., Mlynář, J., Javůrková, A., & **Topinková, R.** (2017). Nená
 <br>
 
 ## Conferences
+
+Topinková, R. & Ruiz, T. (2024) Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [poster](../docs/topinkova_ruiz_poster_venice24.pdf)
+
+
+Topinková, R. & Schwemmer, C. (2023) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy.
+
+
 Mlynář, J., Liesenfeld, A., **Topinková, R.**, Stommel, W., de Rijk, L., Albert, S. (2021, October). An artificial turn in social interaction research?. 6th Multimodality Day. Copenhagen, Denmark.
 
 **Topinkova, R.**, & Diviak, T. (2021, September). It Takes Two to Tango: Analyzing homophily on desirability in an online dating market. Paper presented at ECSR Annual Conference 2021. Online.
