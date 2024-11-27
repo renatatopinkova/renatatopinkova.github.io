@@ -1,24 +1,580 @@
 ---
-title: A Quarto Live Document
+title: "Tutorial: ggplot introduction"
+subtitle: "Research Practicum in CSS"
+date: today
+toc: true
+author: "Renata Topinkova"
 engine: knitr
 format: live-html
 webr:
   packages:
     - dplyr
     - ggplot2
+    - palmerpenguins
+  render-df: gt-interactive
 ---
 
 {{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
 
-```{webr}
-fit = lm(mpg ~ am, data = mtcars)
-summary(fit)
-plot(fit)
+::: callout-warning
+# This is an **experimental** version of the tutorial.
+
+If you spot any errors, please let me know in the forum, so I can fix it.
+:::
+
+Welcome to this interactive tutorial on the **ggplot2 package** in R!
+
+`ggplot2` is one of the most popular and powerful tools for creating data visualizations in R. It is part of the `tidyverse` ecosystem and is built on the *Grammar of Graphics*, which provides a systematic approach to mapping data to aesthetic attributes like position, color, and size.
+
+::: callout-note
+# 🎯 What You'll Learn
+
+In this tutorial, you'll explore the basics of ggplot2, including:
+
+-   [x] Understanding the structure of a ggplot plot.
+-   [x] Adding layers such as points, lines, and bars.
+-   [x] Customizing plot aesthetics like colors, themes, and labels.
+:::
+
+## Let's get started!
+
+### ggplot has layers
+
+In ggplot2, layers are the building blocks of a plot. Each layer adds specific elements to the visualization, such as data points, lines, bars, or annotations. By combining multiple layers, you can create complex and customized plots. This also means that the **order of layers matters** as they get put on top of each other.
+
+![](img/gg_layers.png)
+
+### General ggplot syntax
+
+The general ggplot syntax looks as follows:
+
+``` r
+ggplot(data = data, mapping = aes(x = x_variable, y = y_variable)) +   
+  geom_*() +   
+  other_options()
 ```
 
-This is some text in a tutorial
+💡 **There are two important things to notice:**
+
+1.  The first argument of `ggplot` is `data`, which means we can also pipe (`|>`) our datasets into ggplot directly.
+
+2.  Any additional function (layer) is added with a `+` (not a `|>`)
+
+We can thus rewrite the code above as:
+
+``` r
+data |> 
+  ggplot(mapping = aes(x = x_variable, y = y_variable)) +   
+    geom_*() +   
+    other_options()
+```
+
+## Building our first plot
+
+**First, we load the required packages:**
+
+```{r}
+#| message: false
+library(dplyr)
+library(ggplot2)
+library(palmerpenguins)
+```
+
+Next, let's quickly look at our data. We will be using a dataset about penguins in Antartica. The dataset is included in a `palmerpinguins` package. If you want to explore it on your own, you can get it with `install.packages("palmerpenguins")` and the load it with a `library()` function.
+
+**This is how our data looks:**
 
 ```{webr}
-mtcars |> 
-  filter(mpg  > 20)
+penguins
 ```
+
+:::{.callout-tip}
+
+# Interacting with this tutorial
+
+Click on `Run code` to execute the code and to observe the differences. You can also modify the code - don't worry, you can always go back to the original version by clicking on the `Start Over` button.
+
+Try it out! Call `glimpse(penguins)` in the code chunk above.
+
+:::
+
+### Data
+
+Let's start by building our first plot (a scatterplot). We will build it iteratively, adding one **layer** at a time.
+
+First, we need to tell R what data we want to use for plotting. Run the following code chunk to see what happens!
+
+```{webr}
+ggplot(data = penguins)
+```
+
+Once you've run the code chunk above, we should be able to see a gray rectangle. That's because even though we told R which data to use, we did not tell it what should be plotted where. We need to specify the `aes`thetics for this.
+
+::: {.callout-tip collapse="true"}
+#### Rewritting our code with pipes
+
+```{webr}
+penguins |> 
+  ggplot()
+```
+:::
+
+### Aesthetics
+
+Next, we need to specify **what goes where**. We will do this inside the `aes` function. Map flipper length to x-axis, and body_mass_g to y-axis.
+
+```{webr}
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g))
+```
+
+We are making progress! The x- and y-axes now have labels (shown as column names) and some axis ticks (170, 180, 190 etc. on the x-axis and 3000, 4000, 5000 etc. on the y-axis), which are based on the columns we provided.
+
+### Geoms
+
+The next step is to tell `ggplot` how should our data be represented - Should your data be plotted as lines, bars, points, boxplots, distributions, or something else? Since we want to make a scatterplot, each data point should be represented by a point. We can specify this by calling a `geom_*()` layer, in particular the `geom_point()` layer.
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point()
+```
+
+🎊 Ta-dah! Our plot now has some observations!
+
+:::{.callout-note collapse=true}
+
+# What other geoms are there? 
+
+There are many, many other geoms that you can use. Some of the more common ones are:
+
+-   `geom_bar()` and `geom_col()`
+
+-   `geom_line()` and `geom_smooth()`
+
+-   `geom_histogram()` and `geom_density()`
+
+-   `geom_boxplot()` and `geom_violin()`
+
+-   `geom_sf()` (for maps)
+
+You can see other `geom_*` functions available in ggplot [here](https://ggplot2.tidyverse.org/reference/#geoms). There are also many specialized packages for additional plots such as [ggridges](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html) (for distributions), [ggraph](https://ggraph.data-imaginist.com/) (for networks), or [plotly](https://plotly.com/r/) (for interactive plots). [Visit the R graph gallery to learn more.](https://r-graph-gallery.com/)
+
+:::
+
+### Adding labels
+
+We managed to show our data. Now we also need to communicate what is happening in our plot. Let's add some labels. We can do this with the `labs()` function. There are multiple arguments that we could specify - such as title, subtitle, x, y, or caption.
+
+To make a title, we can execute this code chunk:
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)")
+```
+
+<br>
+
+#### **🧠 Try it yourself**
+
+Fill in the blanks (\_\_\_\_\_\_) in the code to add subtitle, caption, and change the labels of x and y axes.
+
+```{webr}
+#| exercise: ex_label
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)",
+       subtitle = "_________",
+       caption = "_____________", 
+       x = "______________", 
+       y = "_______________")
+```
+
+::: { .hint exercise="ex_label"}
+::: { .callout-note collapse="false"}
+## Hint
+
+Fill in the blanks between the quotation marks.
+
+```{r}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)",
+       subtitle = "The longer the flipper, the higher the body mass!",
+       caption = "_____________", 
+       x = "______________", 
+       y = "_______________")
+```
+:::
+:::
+
+::: { .solution exercise="ex_label"}
+::: { .callout-note collapse="false"}
+## Solution
+
+Fill in the blanks between the quotation marks.
+
+```{r}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)",
+       subtitle = "The longer the flipper, the higher the body mass!",
+       caption = "Data source: Palmer Penguins", 
+       x = "Flipper length (mm)", 
+       y = "Body mass (g)")
+```
+:::
+:::
+
+### Themes
+
+So far, we changed mainly how our data is displayed. But we may also want to make our plots look nicer in general. **Theme functions** are used to control the non-data elements of a plot, such as text, gridlines, background, and axes. There are several pre-defined themes that your can use, such as `theme_minimal()`.
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal()
+```
+
+<br>
+
+#### **🧠 Try it yourself**
+
+Modify the code chunk below to experiment with different themes. Some of the possibilites are: `theme_bw()`, `theme_linedraw()`, or `theme_dark()`. You can see all the available `theme`s that get loaded with `ggplot2` [here](https://ggplot2.tidyverse.org/reference/ggtheme.html).
+
+```{webr}
+#| warning: false
+#| exercise: ex_theme
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  ______()
+```
+
+
+::: { .hint exercise="ex_theme"}
+::: { .callout-note collapse="false"}
+
+## Hint
+
+Try putting `theme_dark()` instead of the _____.
+
+:::
+:::
+
+::: { .solution exercise="ex_theme"}
+::: { .callout-note collapse="false"}
+
+## Solution
+
+```{r}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_dark()
+```
+
+
+:::
+:::
+
+:::{.callout-tip}
+
+# More pre-defined themes? 
+
+To get more ready-made themes, you can install the `ggthemes` package. You can view the available themes on the [website of the package](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/).
+
+:::
+
+:::{.callout-tip collapse=true}
+
+# Existing themes are not good enough for you? Make your own!
+
+You can also build your own theme or overwrite existing themes with `theme()` layer. Anything you see in your plot can be customized.
+
+For example, I can enlarge the title text of the plot with:
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme(plot.title = element_text(size = 18))
+```
+
+Alternatively, I can use one of the pre-defined themes as a baseline and then overwrite parts of it. I could do it by first adding the layer with the pre-defined theme (e.g., `theme_minimal()` ) and then calling `theme()`:
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+               y = body_mass_g)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() + 
+  theme(plot.title = element_text(size = 18))
+```
+
+:::
+
+## Getting a little more complicated
+
+We made our first plot, we can see that there is correlation between penguins' flipper length and body mass. But we also know that we have three different species of penguins in our data. We can see this by running:
+
+```{webr}
+panguins |> 
+  distinct(species)
+```
+
+In the next step, we will add the `species` column (variable) into our plot.
+
+### Adding more variables
+
+To map any `aes`thetics to a variable, we need to specify it inside the `aes` function. There are different aesthetics we could use, common ones are `color`, `fill`, `size`, `shape` ([available shapes](https://ggplot2.tidyverse.org/reference/scale_shape-6.png)) and `alpha` (=transparency, 0-1).
+
+A good way to see whether there is some difference between our penguins would be by changing the `color` of dots (observations in our plot) by the contents of the `species` column.
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+That wasn't so hard, was it! It's clear now that the penguins flipper lengths and weights differ by species. Gentoo penguins seem to be overall bigger than other species.
+
+💡 Notice also that mapping `color` to `species` created a **legend** on the right side of the plot.
+
+#### **🧠 Try it yourself**
+
+Modify the following code to map `species` to `shape`.
+
+```{webr}
+#| warning: false
+#| exercise: ex_shape
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           ___ = ____)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+
+::: { .hint exercise="ex_shape"}
+::: { .callout-note collapse="false"}
+
+## Hint
+```r
+`ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           shape = ____))
+```
+
+:::
+:::
+
+::: { .solution exercise="ex_shape"}
+::: { .callout-note collapse="false"}
+
+## Solution
+
+```{r}
+#| warning: false
+#| exercise: ex_shape
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           shape = species)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+
+:::
+:::
+
+
+#### Beware: Mapping vs Setting
+
+What we've done so far was **mapping** variables to aesthetics. However, we may also want to change the appearance of all points at once. We can do this by **setting** to values. Unlike mapping to variables, **setting** is always done \*\*outside of the `aes()` call.
+
+To increase the sizes of all points, we could call:
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point(size = 4) + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+I could also decide to make all my points blue.
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point(size = 4,
+             color = "blue") + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+So far, the results are predictable. I **set** the color of points to blue, so my points are blue. But what if I made a mistake and instead put the `color = "blue"` inside the `aes()`?
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g, 
+           color = "blue")) + # notice the change!
+  geom_point(size = 4) + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+The color of all points changed... But to red? 🤯 **Why did this happen?**
+
+One clue is on the side of the plot - notice that there is now a **legend** which shows that the red color represents something called blue. The reason is that `aes()` expects **mapping** to a variable, in this case, to a variable called "blue". Even though it does not exist, R creates a makeshift "blue" column in our data, which is then used to color every point in our plot. Since the first color in ggplot's palette is this particular shade of red, that's the color we get!
+
+### Order matters 
+
+By now, we know that we can build our plots by adding **layers** on top of each other with `+`.
+
+This is our starting point:
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) + 
+  geom_point() + 
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+Imagine that we want to add a rectangle (using `geom_rectangle()`) to our plot. Maybe it's some part of data we want to highlight.
+
+It matters whether we put the rectangle **before** the `geom_point()` layer....
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) + 
+  geom_rect(aes(xmin = 210, xmax = 220, ymin = 0, ymax = Inf), fill = "black", color = "black") +
+  geom_point() +  # points come second
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+... or **after** the `geom_point()` layer:
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) + 
+  geom_point() +  # points come first
+  geom_rect(aes(xmin = 210, xmax = 220, ymin = 0, ymax = Inf), fill = "black", color = "black") +
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  theme_minimal() 
+```
+
+### Small multiples - facetting
+
+Lastly, we may want to split our data to multiple plots by some variable (column) in our data. We can do this with `facet_wrap()`.
+
+In this case, we do not color our points based on species (notice the missing line in aes()) but instead split our plot into small multiples by species.
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point() +  
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  facet_wrap(vars(species)) + #<1>
+  theme_minimal() 
+```
+
+1.  There are two ways on how to `facet_wrap()` based on a column, either by wrapping it in `vars()` as seen in our example (`facet_wrap(vars(species))`, or by calling `facet_wrap(~species)`. Both produce the same result, the `~` notation is an older version of the function.
+
+🐧 Now each of the species has its own plot (facet)!
+
+:::{.callout-note collapse=true}
+
+# Making less or more facets
+
+**1) Less or more per row or column**
+
+A common thing we may want to change is the number of "small multiples" per row or column. We can modify this by specifying the `nrow` or `ncol` arguments in `facet_wrap`.
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point() +  
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  facet_wrap(vars(species), ncol = 1) + 
+  theme_minimal() 
+```
+
+**2) Faceting by two variables**
+
+```{webr}
+#| warning: false
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point() +  
+  labs(title = "Penguins flipper lengths (mm) vs body mass (g)") +
+  facet_wrap(vars(species, island)) + 
+  theme_minimal() 
+```
+
+🏝️ We can see that not all species of penguins live on all the islands!
+
+:::
