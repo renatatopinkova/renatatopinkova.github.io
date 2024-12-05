@@ -1,0 +1,156 @@
+---
+title: "Understanding _join() functions"
+date: today
+author: "Renata Topinkova"
+format: live-html
+webr:
+  packages:
+    - dplyr
+  render-df: gt-interactive
+editor: visual
+toc: true
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+### Introduction
+
+R provides several functions for joining data frames from the `dplyr` package. These functions help combine datasets based on common **keys** (columns that can be used to match observations across multiple datasets).
+
+First, we need to load the `dplyr` package to get access to the `_join()` function family.
+
+```{webr}
+#| message: false
+library(dplyr)
+```
+
+### Example Datasets
+
+We have these two example datasets
+
+**employees**
+
+```{webr}
+#| autorun: true
+employees <- tibble(emp_id = c(1, 2, 3, 4),
+                    name = c("Alice", "Bob", "Charlie", "David"), 
+                    dept_id = c(101, 102, 101, 103))
+
+employees
+
+```
+
+**departments**
+
+```{webr}
+#| autorun: true
+departments <- tibble(   
+  dept_id = c(101, 102, 104),   
+  dept_name = c("HR", "Finance", "IT"))
+
+departments
+```
+
+### 1. `left_join()`
+
+Retains all rows from the left data frame (`employees`) and matches rows from the right data frame (`departments`). Missing matches from the right data frame result in `NA`.
+
+```{webr}
+employees |> 
+  left_join(departments, by = "dept_id")
+
+```
+
+### 2. `right_join()`
+
+Retains all rows from the right data frame (`departments`) and matches rows from the left data frame (`employees`). Missing matches from the left data frame result in `NA`.
+
+```{webr}
+employees |> 
+  right_join(departments, by = "dept_id")
+```
+
+### 3. `inner_join()`
+
+Retains only rows with keys present in both data frames.
+
+```{webr}
+employees |> 
+  inner_join(departments, by = "dept_id")
+
+```
+
+### 4. `full_join()`
+
+Retains all rows from both data frames, filling in `NA` for missing matches.
+
+```{webr}
+employees |> 
+  full_join(departments, by = "dept_id")
+```
+
+### 5. `semi_join()`
+
+Retains all rows from the left data frame (`employees`) that have a match in the right data frame (`departments`). The right data frame's columns are not included in the result.
+
+```{webr}
+employees |> 
+  semi_join(departments, by = "dept_id")
+
+```
+
+### 6. `anti_join()`
+
+Retains all rows from the left data frame (`employees`) that do not have a match in the right data frame (`departments`).
+
+```{webr}
+employees |> 
+  anti_join(departments, by = "dept_id")
+```
+
+### Joins with different keys
+
+When the key columns in the two data frames have different names, you can still perform joins by specifying the column names in the `by` argument.
+
+Suppose we have the following two dataframes:
+
+**employees**
+
+```{webr}
+employees <- tibble(
+  emp_id = c(1, 2, 3, 4),
+  name = c("Alice", "Bob", "Charlie", "David"),
+  department_id = c(101, 102, 101, 103)
+)
+
+employees
+```
+
+**departments**
+
+```{webr}
+departments <- tibble(
+  dept_code = c(101, 102, 104),
+  dept_name = c("HR", "Finance", "IT")
+)
+
+departments
+```
+
+In this example, `employees` has the key column `department_id` and `departments` has the key column `dept_code`. We can use the `by` argument to specify the key columns, with the format `by = c("left_column" = "right_column")`.
+
+```{webr}
+employees |> 
+  left_join(departments, by = c("department_id" = "dept_code"))
+```
+
+### Summary
+
+-   **`left_join`**: All rows from the left, matched rows from the right.
+-   **`right_join`**: All rows from the right, matched rows from the left.
+-   **`inner_join`**: Only matched rows from both.
+-   **`full_join`**: All rows from both, filling in `NA` for unmatched.
+-   **`semi_join`**: Rows from the left that match the right.
+-   **`anti_join`**: Rows from the left that do not match the right.
+
+![Figure source: <https://intro2r.library.duke.edu/join.html>](join_diagram.png)
