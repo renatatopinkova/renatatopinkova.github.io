@@ -1,0 +1,127 @@
+age,site,used,n
+18-29,Bumble,"Yes, I have used this",292.32893739450134
+18-29,Bumble,"No, I have not used this",278.95557618185876
+18-29,Grindr,"Yes, I have used this",48.5629370415939
+18-29,Grindr,"No, I have not used this",515.7164103783122
+18-29,Grindr,Refused,7.0051661564540195
+18-29,HER,"Yes, I have used this",32.787658691766204
+18-29,HER,"No, I have not used this",534.714892671137
+18-29,HER,Refused,3.7819622134569104
+18-29,Hinge,"Yes, I have used this",224.7315323547916
+18-29,Hinge,"No, I have not used this",345.5995919951098
+18-29,Hinge,Refused,0.9533892264587617
+18-29,Match,"Yes, I have used this",52.588029827399474
+18-29,Match,"No, I have not used this",513.1652576012671
+18-29,Match,Refused,5.531226147693634
+18-29,OkCupid,"Yes, I have used this",101.76201273939056
+18-29,OkCupid,"No, I have not used this",468.3668738070377
+18-29,OkCupid,Refused,1.1556270299318623
+18-29,Other,"Yes, I have used this",86.99575809423517
+18-29,Other,"No, I have not used this",383.492830770549
+18-29,Other,Refused,100.79592471157598
+18-29,Tinder,"Yes, I have used this",450.02256711234816
+18-29,Tinder,"No, I have not used this",119.739205715578
+18-29,Tinder,Refused,1.5227407484339754
+18-29,eharmony,"Yes, I have used this",37.83191256972037
+18-29,eharmony,"No, I have not used this",531.8349460930696
+18-29,eharmony,Refused,1.6176549135702214
+30-49,Bumble,"Yes, I have used this",189.91512361244514
+30-49,Bumble,"No, I have not used this",574.6802637702798
+30-49,Bumble,Refused,13.008303768482948
+30-49,Grindr,"Yes, I have used this",44.0355256283196
+30-49,Grindr,"No, I have not used this",719.7381640340435
+30-49,Grindr,Refused,13.830001488844848
+30-49,HER,"Yes, I have used this",8.53421288713434
+30-49,HER,"No, I have not used this",757.076095616327
+30-49,HER,Refused,11.993382647746564
+30-49,Hinge,"Yes, I have used this",111.77337720801121
+30-49,Hinge,"No, I have not used this",650.1799898190359
+30-49,Hinge,Refused,15.650324124160834
+30-49,Match,"Yes, I have used this",265.01062014947075
+30-49,Match,"No, I have not used this",495.69283177642706
+30-49,Match,Refused,16.90023922531012
+30-49,OkCupid,"Yes, I have used this",221.46547566332774
+30-49,OkCupid,"No, I have not used this",542.415294855486
+30-49,OkCupid,Refused,13.722920632394166
+30-49,Other,"Yes, I have used this",276.1602445271012
+30-49,Other,"No, I have not used this",410.86589205938805
+30-49,Other,Refused,90.57755456471862
+30-49,Tinder,"Yes, I have used this",339.5264266774948
+30-49,Tinder,"No, I have not used this",431.1700972124233
+30-49,Tinder,Refused,6.9071672612898345
+30-49,eharmony,"Yes, I have used this",164.10648231466192
+30-49,eharmony,"No, I have not used this",597.8217622206726
+30-49,eharmony,Refused,15.675446615873444
+50-64,Bumble,"Yes, I have used this",27.126284538570616
+50-64,Bumble,"No, I have not used this",273.0381257914959
+50-64,Bumble,Refused,11.511527535708861
+50-64,Grindr,"Yes, I have used this",17.15370517170797
+50-64,Grindr,"No, I have not used this",281.54623589141823
+50-64,Grindr,Refused,12.975996802649169
+50-64,HER,"Yes, I have used this",3.6333619258021397
+50-64,HER,"No, I have not used this",291.40398717507014
+50-64,HER,Refused,16.638588764903105
+50-64,Hinge,"Yes, I have used this",10.311800919367212
+50-64,Hinge,"No, I have not used this",287.38940563326827
+50-64,Hinge,Refused,13.974731313139872
+50-64,Match,"Yes, I have used this",168.34063412177554
+50-64,Match,"No, I have not used this",135.879053957247
+50-64,Match,Refused,7.456249786752832
+50-64,OkCupid,"Yes, I have used this",45.785979862115184
+50-64,OkCupid,"No, I have not used this",250.2837030758515
+50-64,OkCupid,Refused,15.606254927808713
+50-64,Other,"Yes, I have used this",134.5297754435766
+50-64,Other,"No, I have not used this",147.15730255917637
+50-64,Other,Refused,29.988859863022412
+50-64,Tinder,"Yes, I have used this",53.53543890673384
+50-64,Tinder,"No, I have not used this",246.82878950423733
+50-64,Tinder,Refused,11.311709454804202
+50-64,eharmony,"Yes, I have used this",88.573250542465
+50-64,eharmony,"No, I have not used this",212.85561834918605
+50-64,eharmony,Refused,10.247068974124325
+65+,Bumble,"Yes, I have used this",2.7487337675347505
+65+,Bumble,"No, I have not used this",162.76389307648688
+65+,Bumble,Refused,7.497166622504059
+65+,Grindr,"Yes, I have used this",2.4990966134137045
+65+,Grindr,"No, I have not used this",162.9948837440954
+65+,Grindr,Refused,7.515813109016567
+65+,HER,"Yes, I have used this",1.1954322332732534
+65+,HER,"No, I have not used this",162.76482548182557
+65+,HER,Refused,9.04953575142685
+65+,Hinge,"Yes, I have used this",0.9529614235377928
+65+,Hinge,"No, I have not used this",163.25897702992177
+65+,Hinge,Refused,8.79785501306611
+65+,Match,"Yes, I have used this",75.48666277183897
+65+,Match,"No, I have not used this",92.42893270698586
+65+,Match,Refused,5.094197987700862
+65+,OkCupid,"Yes, I have used this",7.012586830568281
+65+,OkCupid,"No, I have not used this",159.02766921038867
+65+,OkCupid,Refused,6.969537425568721
+65+,Other,"Yes, I have used this",66.73343591890745
+65+,Other,"No, I have not used this",88.27337842177735
+65+,Other,Refused,18.002979125840866
+65+,Tinder,"Yes, I have used this",2.177411659135677
+65+,Tinder,"No, I have not used this",162.64308970453084
+65+,Tinder,Refused,8.189292102859177
+65+,eharmony,"Yes, I have used this",58.30239366167223
+65+,eharmony,"No, I have not used this",110.24664903781073
+65+,eharmony,Refused,4.460750767042724
+Refused,Bumble,"Yes, I have used this",0.561380061857399
+Refused,Bumble,"No, I have not used this",1.7574822103494385
+Refused,Grindr,"Yes, I have used this",0.2029060435729684
+Refused,Grindr,"No, I have not used this",1.9325367621471734
+Refused,Grindr,Refused,0.18341946648669571
+Refused,HER,"Yes, I have used this",0.18341946648669571
+Refused,HER,"No, I have not used this",2.135442805720142
+Refused,Hinge,"Yes, I have used this",0.3863255100596641
+Refused,Hinge,"No, I have not used this",1.9325367621471734
+Refused,Match,"Yes, I have used this",1.2407464054459427
+Refused,Match,"No, I have not used this",1.078115866760895
+Refused,OkCupid,"Yes, I have used this",0.7316529118732827
+Refused,OkCupid,"No, I have not used this",1.5872093603335549
+Refused,Other,"Yes, I have used this",0.8780684726349015
+Refused,Other,"No, I have not used this",1.440793799571936
+Refused,Tinder,"Yes, I have used this",0.561380061857399
+Refused,Tinder,"No, I have not used this",1.7574822103494385
+Refused,eharmony,"Yes, I have used this",1.5861094637807758
+Refused,eharmony,"No, I have not used this",0.7327528084260617
