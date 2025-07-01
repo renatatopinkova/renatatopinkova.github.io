@@ -7,6 +7,8 @@ permalink: publications
 
 ## Publications
 
+**Topinková, R.** & Diviák, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. Accepted in PLOS ONE. [https://doi.org/10.1371/journal.pone.0327477](https://doi.org/10.1371/journal.pone.0327477)
+
 del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2023). Mental health concerns precede quits: shifts in the work discourse during the Covid-19 pandemic and great resignation. *EPJ Data Science*, 12(49). [https://doi.org/10.1140/epjds/s13688-023-00417-2](https://doi.org/10.1140/epjds/s13688-023-00417-2)
 
 
