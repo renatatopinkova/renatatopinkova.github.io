@@ -7,7 +7,7 @@ permalink: publications
 
 ## Publications
 
-**Topinková, R.** & Diviák, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. Accepted in PLOS ONE. [https://doi.org/10.1371/journal.pone.0327477](https://doi.org/10.1371/journal.pone.0327477)
+**Topinková, R.** & Diviák, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. Forthcoming in PLOS ONE. 
 
 del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2023). Mental health concerns precede quits: shifts in the work discourse during the Covid-19 pandemic and great resignation. *EPJ Data Science*, 12(49). [https://doi.org/10.1140/epjds/s13688-023-00417-2](https://doi.org/10.1140/epjds/s13688-023-00417-2)
 
@@ -32,11 +32,11 @@ Holubová, K., Mlynář, J., Javůrková, A., & **Topinková, R.** (2017). Nená
 
 ## Conferences
 
-Topinková, R. & Ruiz, T. (2024) Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [Poster available](../docs/topinkova_ruiz_poster_venice24.pdf)
+**Topinková**, R. & Ruiz, T. (2024) Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [Poster available](../docs/topinkova_ruiz_poster_venice24.pdf)
 
+**Topinková**, R. & Schwemmer, C. (2024) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. INAS 2024. Leipzig, Germany.
 
-Topinková, R. & Schwemmer, C. (2023) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy.
-
+**Topinková, R.** & Schwemmer, C. (2023) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy.
 
 Mlynář, J., Liesenfeld, A., **Topinková, R.**, Stommel, W., de Rijk, L., Albert, S. (2021, October). An artificial turn in social interaction research?. 6th Multimodality Day. Copenhagen, Denmark.
 
