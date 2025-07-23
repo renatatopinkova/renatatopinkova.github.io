@@ -7,13 +7,11 @@ permalink: publications
 
 ## Publications
 
-**Topinková, R.** & Diviák, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. Forthcoming in PLOS ONE. 
+**Topinkova, R.**, & Diviak, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. PLOS ONE, 20(7), e0327477. [https://doi.org/10.1371/journal.pone.0327477](https://doi.org/10.1371/journal.pone.0327477)
 
 del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2023). Mental health concerns precede quits: shifts in the work discourse during the Covid-19 pandemic and great resignation. *EPJ Data Science*, 12(49). [https://doi.org/10.1140/epjds/s13688-023-00417-2](https://doi.org/10.1140/epjds/s13688-023-00417-2)
 
-
 Raudenská, P., & **Topinková, R.** (2023). The #scicomm phenomenon: Using and analysing big data to track science communication on Czech research institutional websites. *Czech Sociological Review*. [https://doi.org/10.13060/csr.2023.004](https://doi.org/10.13060/csr.2023.004)
-
 
 Šetinová, M. & **Topinková, R.** (2021). Partner preference and age: Real-user mating behavior in online dating. *Journal of Family Research*, 33 (3). 566-591. [https://doi.org/10.20377/jfr-540](https://doi.org/10.20377/jfr-540) 
 
@@ -47,4 +45,3 @@ Mlynář, J., Liesenfeld, A., **Topinková, R.**, Stommel, W., de Rijk, L., Albe
 Hamplova, D., **Topinkova, R.**, & Klimova Chaloupkova, J. (2018, October). More money, less housework? Relative resources and housework in the Czech Republic. Paper presented at the ECSR 2018 conference, Paris, France.
 
 Hamplova, D., **Topinkova, R.**, & Klimova Chaloupkova, J. (2018, August). Housework, education, and relative earnings: When do norms trump economic rationality? Paper presented at the 113th meeting of the American Sociological Association, Philadelphia, USA.
-
