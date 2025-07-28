@@ -30,11 +30,13 @@ Holubová, K., Mlynář, J., Javůrková, A., & **Topinková, R.** (2017). Nená
 
 ## Conferences
 
-**Topinková**, R. & Ruiz, T. (2024) Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [Poster available](../docs/topinkova_ruiz_poster_venice24.pdf)
+**Topinková, R.**, Ruiz, T. & Schwemmer, C. (2025). Hustling Health: The Blurred Line Between Personal Narratives and Product Marketing in PCOS and Endometriosis Content on TikTok. IC2S2. Norrköping. [Poster available](../docs/poster_ic2s2_25.pdf)
 
-**Topinková**, R. & Schwemmer, C. (2024) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. INAS 2024. Leipzig, Germany.
+**Topinková, R.** & Ruiz, T. (2024). Marketing Women's Reproductive Health on TikTok: An Exploratory Study Using Computational Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy. [Poster available](../docs/topinkova_ruiz_poster_venice24.pdf)
 
-**Topinková, R.** & Schwemmer, C. (2023) How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy.
+**Topinková, R.** & Schwemmer, C. (2024). How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. INAS 2024. Leipzig, Germany.
+
+**Topinková, R.** & Schwemmer, C. (2023). How (Not) To Fix Online Dating - An Empirical Assessment Using Computational and Experimental Methods. Seminar Analytical Sociology: Theory and Empirical Applications. Venice, Italy.
 
 Mlynář, J., Liesenfeld, A., **Topinková, R.**, Stommel, W., de Rijk, L., Albert, S. (2021, October). An artificial turn in social interaction research?. 6th Multimodality Day. Copenhagen, Denmark.
 
