@@ -14,5 +14,6 @@ I am interested in **computational social science** (data mining, designing and 
 I like dogs, baking, knitting (both in and outside of Quarto) and learning new things in R.
 
 
-🆕 New publication on online dating: Topinkova, R., & Diviak, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. Available in [PLOS ONE](https://doi.org/10.1371/journal.pone.0327477)
-🆕 Presented a poster at IC2S2 on women's health (pcos, endometriosis) and product promotion on TikTok. [Poster available](/docs/poster_ic2s2_25.pdf)
+🆕 **New publication** on online dating: Topinkova, R., & Diviak, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. Available in [PLOS ONE](https://doi.org/10.1371/journal.pone.0327477)
+
+🆕 Presented a **poster at IC2S2** on women's health (pcos, endometriosis) and product promotion on TikTok. [Poster available](/docs/poster_ic2s2_25.pdf)
