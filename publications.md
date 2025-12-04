@@ -7,6 +7,9 @@ permalink: publications
 
 ## Publications
 
+**Topinkova, R.**, & Schwemmer, C. (2025). How (Not) To Fix Online Dating - An Empirical Assessment Using Computational Experiments. SocArXiv preprint.
+[https://doi.org/10.31235/osf.io/8hdws_v1](https://doi.org/10.31235/osf.io/8hdws_v1).
+
 **Topinkova, R.**, & Diviak, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. PLOS ONE, 20(7), e0327477. [https://doi.org/10.1371/journal.pone.0327477](https://doi.org/10.1371/journal.pone.0327477)
 
 del Rio-Chanona, R. M., Hermida-Carrillo, A., Sepahpour-Fard, M., Sun, L., **Topinkova, R.**, & Nedelkoska, L. (2023). Mental health concerns precede quits: shifts in the work discourse during the Covid-19 pandemic and great resignation. *EPJ Data Science*, 12(49). [https://doi.org/10.1140/epjds/s13688-023-00417-2](https://doi.org/10.1140/epjds/s13688-023-00417-2)

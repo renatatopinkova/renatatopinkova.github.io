@@ -15,6 +15,9 @@ I like dogs, baking, knitting (both in and outside of Quarto) and learning new t
 
 <br>
 
-🆕 [New publication](https://doi.org/10.1371/journal.pone.0327477) on online dating: Topinkova, R., & Diviak, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app. 
+🆕 [New preprint](https://osf.io/preprints/socarxiv/8hdws_v1) on online dating: Topinkova, R., & Schwemmer, C. (2025).
+How (Not) To Fix Online Dating - An Empirical Assessment Using Computational Experiments.
 
-🆕 Presented a [poster at IC2S2](/docs/poster_ic2s2_25.pdf) on women's health (pcos, endometriosis) and product promotion on TikTok.
+📘 [Publication](https://doi.org/10.1371/journal.pone.0327477) on online dating: Topinkova, R., & Diviak, T. (2025). It takes two to tango: A directed two-mode network approach to desirability on a mobile dating app.
+
+📈 Presented a [poster at IC2S2](/docs/poster_ic2s2_25.pdf) on women's health (pcos, endometriosis) and product promotion on TikTok.
