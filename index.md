@@ -16,7 +16,8 @@ I like dogs, baking, knitting (both in and outside of Quarto) and learning new t
 <br>
 
 🆕 [New preprint](https://osf.io/preprints/socarxiv/tc5zq_v1) on agentic browsers and survey completion: Topinkova, R., & Schwemmer, C. (2026).
-“Fill Out this Survey”: Capabilities and Detection of AgenticBrowsers. - Comments and feedback welcome! [Bluesky thread](https://bsky.app/profile/cschwem2er.bsky.social/post/3mrp6hjvq2c2y) including a showcase video.
+“Fill Out this Survey”: Capabilities and Detection of Agentic Browsers. <br> 
+Comments and feedback welcome! [Bluesky thread](https://bsky.app/profile/cschwem2er.bsky.social/post/3mrp6hjvq2c2y) including a showcase video.
 
 📘 [Preprint](https://osf.io/preprints/socarxiv/8hdws_v1) on online dating: Topinkova, R., & Schwemmer, C. (2025).
 How (Not) To Fix Online Dating - An Empirical Assessment Using Computational Experiments.
