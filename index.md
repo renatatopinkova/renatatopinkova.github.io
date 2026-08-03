@@ -5,7 +5,7 @@ layout: default
 
 ## Welcome!
 
-I am a Postdoctoral Researcher in Computational social science at [LMU Munich](https://www.soziologie.lmu.de/de/das-institut/personen/kontaktseite/renata-topinkova-25ddbb4e.html). 
+I am a Postdoctoral Researcher in Computational social science at [LMU Munich](https://www.soziologie.lmu.de/en/our-department/faculty-and-staff/contact-page/renata-topinkova-25ddbb4e.html). 
 
 My thesis examined homophily in online dating using digital trace data from online dating sites. Apart from that, I have [co-authored papers](/publications) on the division of household labor, partner preferences, and mental health and unemployment.
 
